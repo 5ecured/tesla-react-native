@@ -1,9 +1,16 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet, Dimensions } from "react-native"
 
 const styles = StyleSheet.create({
     carContainer: {
         width: '100%',
-        height: '100%'
+
+        /**
+         * using height like below was ok when our parent was the main screen. 
+         * Now CarItem's parent is FlatList and it wont work. So we must use Dimensions 
+         */
+
+        //height: '100%',
+        height: Dimensions.get('window').height
     },
     titles: {
         marginTop: '30%',

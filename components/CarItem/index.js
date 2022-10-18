@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './style'
 import StyledButton from '../StyledButton'
 
-const CarItem = ({ name, tagline, taglineCTA, image }) => {
+const CarItem = ({ car: { name, tagline, taglineCTA, image } }) => {
 
     return (
         <View style={styles.carContainer}>
